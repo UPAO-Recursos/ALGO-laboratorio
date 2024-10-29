@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class Laboratorio11 {
     public static void main(String[] args) throws IOException {
@@ -21,7 +22,8 @@ public class Laboratorio11 {
                 int nota = Integer.parseInt(br.readLine());
                 notas[j] = nota;
             }
-            ImprimirObjetos(notas);
+            int promedio = CalcularPromedio(notas);
+            System.out.println("El promedio de notas del estuiante es:" + promedio);
         }
 
         // Validaciones:
@@ -35,6 +37,14 @@ public class Laboratorio11 {
         // PASO 3: CALCULA LA NOTA MAS BAJA
         // PASO 3: CALCULA LA MEDIA
         ImprimirObjetos(arregloCadenas);
+    }
+
+    private static int CalcularPromedio(int[] notas) {
+        int sumaTotal = 0;
+        for (int i = 0; i < notas.length; i++) {
+            sumaTotal += notas[i];
+        }
+        return sumaTotal / notas.length;
     }
 
     private static void GuardarValor(String[] arreglo, int position, String value) {
