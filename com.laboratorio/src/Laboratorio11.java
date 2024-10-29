@@ -24,6 +24,10 @@ public class Laboratorio11 {
             ImprimirObjetos(notas);
         }
 
+        // Validaciones:
+        // Las notas son de 0 a 20
+        // Los alumnos deben tener al menos nombre y apellido
+
         // PASO 1: INGRESA LA CANTIDAD DE ESTUDIANTES
         // PASO 2: INGRESA LAS NOTAS DEL ESTUDIANTE
         // PASO 3: CALCULA EL PROMEDIO DEL ESTUDIANTE
